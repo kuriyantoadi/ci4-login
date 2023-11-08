@@ -5,4 +5,27 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+
+
+// jika ingin otomatis controller terbaca langsung
+// $routes->setAutoRoute(true);
+
+// pindahkan default controller
+// kondisi awal
+// $routes->get('/', 'Home::index');
+
+// Setelah di edit
+$routes->get('/', 'Login::index');
+
+// Manual Routes
+// format (pemanggilan_link, controller, function)
+$routes->get('/', 'Login::index');
+
+$routes->get('/Login', 'Login::index');
+$routes->get('/User', 'User::index');
+$routes->get('/Login/logout', 'Login::logout');
+
+
+$routes->get('/Login/login_action', 'Login::login_action');
+$routes->post('/Login/login_action', 'Login::login_action');
+
