@@ -6,10 +6,10 @@ use CodeIgniter\Model;
 
 class M_user extends Model
 {
-    public function get_data($email, $password)
+    public function get_data($username, $password)
 	{
       return $this->db->table('user')
-      ->where(array('user_email' => $email, 'user_pass' => $password))
+      ->where(array('username' => $username, 'user_pass' => $password))
       ->get()->getRowArray();
 	}
 }

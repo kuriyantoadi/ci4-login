@@ -19,13 +19,17 @@ $routes->get('/', 'Login::index');
 
 // Manual Routes
 // format (pemanggilan_link, controller, function)
-$routes->get('/', 'Login::index');
 
-$routes->get('/Login', 'Login::index');
+// halaman user
 $routes->get('/User', 'User::index');
+
+// halaman user
+$routes->get('/Admin', 'Admin::index');
+
+// routes login
+$routes->get('/', 'Login::index');
+$routes->get('/Login', 'Login::index');
 $routes->get('/Login/logout', 'Login::logout');
-
-
 $routes->get('/Login/login_action', 'Login::login_action');
 $routes->post('/Login/login_action', 'Login::login_action');
 
