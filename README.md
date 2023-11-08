@@ -32,14 +32,16 @@
 <br>`CI_ENVIRONMENT = development`
 
 
-## Setting dabatase dan halaman login
+## Setting Dabatase dan halaman Login
 
+- import database `ci4_login.sql`
 - Setting koneksi database `app/Config/Database.php`
 <code>
         <br>'username'     => 'root',
         <br>'password'     => '',
         <br>'database'     => 'ci4_login',
 </code>
+
 - Edit file app/Config/Routes.php seperti berikut
 <br> untuk routes otomatis maka tambahkan beris berikut
 `$routes->setAutoRoute(true);`
